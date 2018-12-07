@@ -66,6 +66,7 @@
     <Compile Include="Assets\__Scripts\Enemy.cs" />
     <Compile Include="Assets\__Scripts\GateKeeper.cs" />
     <Compile Include="Assets\__Scripts\GridMove.cs" />
+    <Compile Include="Assets\__Scripts\GuiPanel.cs" />
     <Compile Include="Assets\__Scripts\IFacingMover.cs" />
     <Compile Include="Assets\__Scripts\IKeyMaster.cs" />
     <Compile Include="Assets\__Scripts\InRoom.cs" />

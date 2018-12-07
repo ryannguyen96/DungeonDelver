@@ -10,14 +10,26 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster
     public float speed = 5;
     public float attackDuration = 0.25f; // Number of seconds to attack
     public float attackDelay = 0.5f; // Delay between attacks
-    public float transitionDelay = 0.5f;
-    // Room transition delay
+    public float transitionDelay = 0.5f; // Room transition delay
+    public int maxHealth = 10;
 
     [Header("Set Dynamically")]
     public int dirHeld = -1; // Direction of the held movement key
     public int facing = 1; // Direction Dray is facing
     public eMode mode = eMode.idle;
     public int numKeys = 0;
+
+    [SerializeField]
+    private int _health;
+    public int health
+    {
+        get
+        {
+            return _health;
+        }
+        set { _health = value; }
+    }
+
     private float timeAtkDone = 0;
     private float timeAtkNext = 0;
     private float transitionDone = 0;
@@ -37,6 +49,7 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster
         rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         inRm = GetComponent<InRoom>();
+        health = maxHealth;
     }
     void Update()
     {
