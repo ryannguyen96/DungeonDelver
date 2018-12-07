@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 447538819}
   - component: {fileID: 447538824}
   - component: {fileID: 447538825}
+  - component: {fileID: 447538826}
   m_Layer: 0
   m_Name: Skeletos
   m_TagString: Untagged
@@ -404,6 +405,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keepInRoom: 1
   gridMult: 1
+--- !u!114 &447538826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 447538818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac12a7e11316bb241a07154177e6fe9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +564,8 @@ GameObject:
   - component: {fileID: 1397513184}
   - component: {fileID: 1397513185}
   - component: {fileID: 1397513186}
+  - component: {fileID: 1397513187}
+  - component: {fileID: 1397513188}
   m_Layer: 0
   m_Name: Dray
   m_TagString: Untagged
@@ -681,6 +695,30 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1397513187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397513180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac12a7e11316bb241a07154177e6fe9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1397513188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397513180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0caa6bbb91785eb41b8b3e94daf6c929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepInRoom: 0
+  gridMult: 1
 --- !u!1 &1451812742
 GameObject:
   m_ObjectHideFlags: 0
