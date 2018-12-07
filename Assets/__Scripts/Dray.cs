@@ -9,35 +9,40 @@ public class Dray : MonoBehaviour
     [Header("Set Dynamically")]
     public int dirHeld = -1; // Direction of the held movement key
     private Rigidbody rigid;
+    private Animator anim;
+
+    private Vector3[] directions = new Vector3[] {
+        Vector3.right, Vector3.up, Vector3.left, Vector3.down
+    };
+
+    private KeyCode[] keys = new KeyCode[] { KeyCode.RightArrow, KeyCode.UpArrow, KeyCode.LeftArrow, KeyCode.DownArrow};
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
         dirHeld = -1;
-        if (Input.GetKey(KeyCode.RightArrow)) dirHeld = 0;
-        if (Input.GetKey(KeyCode.UpArrow)) dirHeld = 1;
-        if (Input.GetKey(KeyCode.LeftArrow)) dirHeld = 2;
-        if (Input.GetKey(KeyCode.DownArrow)) dirHeld = 3;
-        Vector3 vel = Vector3.zero;
-        switch (dirHeld)
+        for (int i = 0; i < 4; i++)
         {
-            case 0:
-                vel = Vector3.right;
-                break;
-            case 1:
-                vel = Vector3.up;
-                break;
-            case 2:
-                vel = Vector3.left;
-                break;
-            case 3:
-                vel = Vector3.down;
-                break;
-        }
+            if (Input.GetKey(keys[i])) dirHeld = i;
+        }
+        Vector3 vel = Vector3.zero;
 
-        rigid.velocity = vel * speed;
+        if (dirHeld > -1) vel = directions[dirHeld];
+        rigid.velocity = vel * speed;
+
+        // Animation
+        if (dirHeld == -1)
+        {
+            anim.speed = 0;
+        }
+        else
+        {
+            anim.CrossFade("Dray_Walk_" + dirHeld, 0 );                      
+            anim.speed = 1;
+        }
     }
 }
