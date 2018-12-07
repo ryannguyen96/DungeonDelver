@@ -594,6 +594,7 @@ GameObject:
   - component: {fileID: 1397513186}
   - component: {fileID: 1397513187}
   - component: {fileID: 1397513188}
+  - component: {fileID: 1397513189}
   m_Layer: 0
   m_Name: Dray
   m_TagString: Untagged
@@ -712,6 +713,7 @@ MonoBehaviour:
   dirHeld: -1
   facing: 1
   mode: 0
+  numKeys: 0
 --- !u!135 &1397513186
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -748,6 +750,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keepInRoom: 0
   gridMult: 1
+--- !u!114 &1397513189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397513180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4132e18e71bf9444a6e3c39fc9dca5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1451812742
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,11 @@ public class Tile : MonoBehaviour
         {
             eTileNum = TileCamera.GET_MAP(x, y);
         }
+        else
+        {
+            TileCamera.SET_MAP(x, y, eTileNum);
+            // Replace if non-default tileNum
+        }
         tileNum = eTileNum;
         GetComponent<SpriteRenderer>().sprite = TileCamera.SPRITES[tileNum];
         SetCollider();
