@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keepInRoom: 0
-  gridMult: 1
+  gridMult: 0.5
 --- !u!114 &1397513189
 MonoBehaviour:
   m_ObjectHideFlags: 0
